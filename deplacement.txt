@@ -1,0 +1,29 @@
+		/*------------------------*/
+		/* Gravité du personnages */
+		/*------------------------*/
+		while (this.grille[this.posLig + 1][futureCol] == ' ')
+		{
+			futureLig = futureLig + 1;
+			this.posLig = futureLig;
+			this.posCol = futureCol;
+		}
+
+
+		/*------------------------------------------------------------*/
+		/* Vérifie si le joueur est sur l'echelle et donc peux monter */
+		/*------------------------------------------------------------*/
+		if (this.grille[this.posLig][this.posCol] == '#' || this.grille[futureLig][futureCol] == '=')
+		{
+			System.out.println("echelle");
+			this.posLig = futureLig;
+			this.posCol = futureCol;
+		}
+
+		/*--------------------------*/
+		/* Vérifie si il y a un mur */
+		/*--------------------------*/
+		if (this.grille[futureLig][this.posCol] != '=')
+		{
+			this.posLig = futureLig;
+			this.posCol = futureCol;
+		}
