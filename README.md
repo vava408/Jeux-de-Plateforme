@@ -6,7 +6,7 @@ Pendant cette SAE, nous avons dû créer un jeu de plateforme. Plusieurs niveaux
 
 |    Symbole    | Signification |
 | ------------- | ------------- |
-|       +       |     Player    |
+|       +       |     Joueur    |
 |       @       |     Sortie    |
 |       =       |     Mur       |
 |       #       |     Echelle   |
