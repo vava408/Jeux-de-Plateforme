@@ -12,6 +12,8 @@ Pendant cette SAE, nous avons dû créer un jeu de plateforme. Plusieurs niveaux
 |       #       |     Echelle   |
 
 **Jeu**
+![Jeux](https://github.com/user-attachments/assets/2f782c11-564b-4bcd-ba6e-f381eace43b0)
+
 
 Pour vous déplacer, utilisez les flèches directionnelles, et appuyez sur Ctrl pour sauter. Pour faire fonctionner le programme, suivez les étapes suivantes :
 
@@ -41,6 +43,8 @@ During this SAE, we had to create a platform game. Several levels are available,
 |       #          |    Ladder        |
 
 Game
+![Jeux](https://github.com/user-attachments/assets/2f782c11-564b-4bcd-ba6e-f381eace43b0)
+
 
 To move, use the arrow keys, and press Ctrl to jump. To make the program work, follow these steps:
 
