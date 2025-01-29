@@ -1,4 +1,4 @@
-import ihmgui.FrameGrille;
+sdsimport ihmgui.FrameGrille;
 import ihmgui.Controle;
 
 /**
