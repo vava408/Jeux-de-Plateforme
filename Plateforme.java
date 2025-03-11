@@ -7,9 +7,8 @@ import java.io.FileInputStream;
  * @author Flem Anthony | Joigneau Arsène | Bassam Youssif youssif | Lemaitre
  *         Valentin | Si Ahmed Sara |
  *
- * Date: 20/12/2024 - 10h45
+ *         Date: 20/12/2024 - 10h45
  */
-
 
 // Classe Plateforme
 public class Plateforme
@@ -26,7 +25,6 @@ public class Plateforme
 	private int posColSortie;
 
 	private int niveau;
-
 
 	// Constructeur de la classe Plateforme
 	public Plateforme()
@@ -47,22 +45,37 @@ public class Plateforme
 		this.remplirTableau();
 	}
 
-
 	// Accesseurs de la classe:
-	public int     getNbLignes                             () { return this.grille.length                                                  ; }
-	public int     getNbColonnes                           () { return this.grille[0].length                                               ; }
-	public boolean estSortie                               () { return this.posLig == this.posLigSortie && this.posCol == this.posColSortie; }
-	public char    getCaseEnvironnement ( int lig, int col )  { return this.getCase ( lig, col, 0 ); }
-	
+	public int getNbLignes()
+	{
+		return this.grille.length;
+	}
+
+	public int getNbColonnes()
+	{
+		return this.grille[0].length;
+	}
+
+	public boolean estSortie()
+	{
+		return this.posLig == this.posLigSortie && this.posCol == this.posColSortie;
+	}
+
+	public char getCaseEnvironnement(int lig, int col)
+	{
+		return this.getCase(lig, col, 0);
+	}
+
 	public char getCase(int lig, int col, int couche)
 	{
-		if ( couche == 1 &&  lig == this.posLig && col == this.posCol ) return '+';
+		if (couche == 1 && lig == this.posLig && col == this.posCol)
+			return '+';
 
 		return this.grille[lig][col];
 	}
 
-
-	// Méthode qui permet d'initialiser la taille de la grille en fonction des fichiers .data
+	// Méthode qui permet d'initialiser la taille de la grille en fonction des
+	// fichiers .data
 	public void initialiserTableau()
 	{
 		/*---------*/
@@ -89,12 +102,13 @@ public class Plateforme
 				colonne = Math.max(colonne, currentLine.length());
 			}
 			sc.close();
+		} catch (Exception e)
+		{
+			e.printStackTrace();
 		}
-		catch (Exception e) { e.printStackTrace(); }
 
 		this.grille = new char[ligne2][colonne];
 	}
-
 
 	// Méthode qui remplit le tableau avec les éléments des fichiers .data
 	public void remplirTableau()
@@ -113,7 +127,7 @@ public class Plateforme
 		{
 			sc = new Scanner(new FileInputStream("data/niveau_0" + this.niveau + ".data"), "UTF8");
 			lig = 0;
-		
+
 			while (sc.hasNextLine())
 			{
 				ligne = sc.nextLine();
@@ -140,38 +154,38 @@ public class Plateforme
 						this.posColSortie = col;
 					}
 				}
-		
+
 				lig++;
 			}
-		
-			sc.close();
-		}
-		catch (Exception e) { e.printStackTrace(); }
-	}
 
+			sc.close();
+		} catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
 
 	// Méthode qui permet d'accéder au niveau suivant.
 	public int niveauSuivant()
 	{
 		this.niveau++;
-		
+
 		this.initialiserTableau();
 		this.remplirTableau();
 
 		return this.niveau;
 	}
 
-
 	// Méthode qui permet d'accéder au niveau précédent.
 	public int niveauPrecedent()
 	{
 		this.niveau--;
 
-		if (this.niveau == 0) this.niveau++;
+		if (this.niveau == 0)
+			this.niveau++;
 
 		return this.niveau;
 	}
-
 
 	// Méthode qui gère le déplacement du personnage
 	public void deplacer(char direction)
@@ -212,26 +226,26 @@ public class Plateforme
 			futureLig = 0;
 		if (futureCol > this.grille[0].length - 1)
 			futureCol = 0;
-			
-		if (direction == 'H' && getCaseEnvironnement(futureLig, futureCol) != '=' && (getCaseEnvironnement(this.posLig +1, this.posCol) == '='||getCaseEnvironnement(this.posLig +1, this.posCol) == '#'))
+
+		if (direction == 'H' && getCaseEnvironnement(futureLig, futureCol) != '='
+				&& (getCaseEnvironnement(this.posLig + 1, this.posCol) == '='
+						|| getCaseEnvironnement(this.posLig + 1, this.posCol) == '#'))
 		{
-				this.posLig = futureLig;
-				sauter = true;
-				System.out.println(!sauter);
+			this.posLig = futureLig;
+			sauter = true;
+			System.out.println(!sauter);
 		}
 
 		/*---------------------------------------*/
 		/* Vérifie si il y a un mur ou une porte */
 		/*---------------------------------------*/
-		if (getCaseEnvironnement(futureLig, futureCol) != '=' &&
-			getCaseEnvironnement(futureLig, futureCol) != 'R'&&
-			getCaseEnvironnement(futureLig, futureCol) != 'B'&&
-			getCaseEnvironnement(futureLig, futureCol) != 'V')
+		if (getCaseEnvironnement(futureLig, futureCol) != '=' && getCaseEnvironnement(futureLig, futureCol) != 'R'
+				&& getCaseEnvironnement(futureLig, futureCol) != 'B'
+				&& getCaseEnvironnement(futureLig, futureCol) != 'V')
 		{
 			this.posLig = futureLig;
 			this.posCol = futureCol;
 		}
-
 
 		/*------------------------*/
 		/* Gravité du personnage */
@@ -240,8 +254,7 @@ public class Plateforme
 				|| getCaseEnvironnement(this.posLig + 1, this.posCol) == 'b'
 				|| getCaseEnvironnement(this.posLig + 1, this.posCol) == 'r'
 				|| getCaseEnvironnement(this.posLig + 1, this.posCol) == 'v'
-				|| getCaseEnvironnement(this.posLig + 1, this.posCol) == '@')
-				&& !sauter)
+				|| getCaseEnvironnement(this.posLig + 1, this.posCol) == '@') && !sauter)
 		{
 			System.out.println("tombe");
 			futureLig = this.posLig + 1;
@@ -249,7 +262,6 @@ public class Plateforme
 			sauter = false;
 		}
 
-		
 		/*------------------------------------------------------------*/
 		/* Vérifie si le joueur est sur l'echelle et donc peux monter */
 		/*------------------------------------------------------------*/
@@ -296,6 +308,6 @@ public class Plateforme
 					if (getCaseEnvironnement(cptLig, cptCol) == 'B' || getCaseEnvironnement(cptLig, cptCol) == 'b')
 						this.grille[cptLig][cptCol] = ' ';
 		}
-		
+
 	}
 }
