@@ -7,12 +7,14 @@ Pendant cette SAE, nous avons dû créer un jeu de plateforme. Plusieurs niveaux
 ---
 
 ## **Symboles et Significations**  
+
 | Symbole | Signification |
 |---------|---------------|
 |    +    | Joueur        |
 |    @    | Sortie        |
 |    =    | Mur           |
 |    #    | Échelle       |
+
 
 ---
 
@@ -57,13 +59,13 @@ During this SAE, we had to create a platform game. Several levels are available,
 ---
 
 ## **Symbols and Meanings**  
+
 | Symbol | Meaning   |
 |--------|-----------|
 |   +    | Player    |
 |   @    | Exit      |
 |   =    | Wall      |
 |   #    | Ladder    |
-
 ---
 
 ## **Game Preview**  
