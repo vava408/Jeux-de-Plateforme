@@ -66,6 +66,8 @@ During this SAE, we had to create a platform game. Several levels are available,
 |   @    | Exit      |
 |   =    | Wall      |
 |   #    | Ladder    |
+
+
 ---
 
 ## **Game Preview**  
