@@ -58,7 +58,7 @@ Vous pouvez créer vos propres niveaux en éditant des fichiers au format `nivea
   <img src="https://github.com/vava408.png" width="80" alt="vava408"/>
 </a>
 <a href="https://github.com/flem-anthony">
-  <img src="https://github.com/flem-anthony" width="80" alt="Lutteur"/>
+  <img src="https://github.com/flem-anthony" width="80" alt="flem-anthony"/>
 </a>
 
 ### English 🇬🇧  
@@ -122,7 +122,7 @@ Project developed as part of the SAE1.01.
   <img src="https://github.com/vava408.png" width="80" alt="vava408"/>
 </a>
 <a href="https://github.com/flem-anthony">
-  <img src="https://github.com/flem-anthony" width="80" alt="Lutteur"/>
+  <img src="https://github.com/flem-anthony" width="80" alt="flem-anthony"/>
 </a>
 
 ## **Contact**  
