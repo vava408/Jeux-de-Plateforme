@@ -52,6 +52,14 @@ Vous pouvez créer vos propres niveaux en éditant des fichiers au format `nivea
 ---
 
 ---
+## 👥 Contributeurs
+
+<a href="https://github.com/vava408">
+  <img src="https://github.com/vava408.png" width="80" alt="vava408"/>
+</a>
+<a href="https://github.com/flem-anthony">
+  <img src="https://github.com/flem-anthony" width="80" alt="Lutteur"/>
+</a>
 
 ### English 🇬🇧  
 During this SAE, we had to create a platform game. Several levels are available, and it is even possible to create your own level using the `niveauXX.data` extension.  
@@ -107,6 +115,15 @@ You can create your own levels by editing files in the `niveauXX.data` format.
 Project developed as part of the SAE1.01.
 
 ---
+
+## 👥 Contributeurs
+
+<a href="https://github.com/vava408">
+  <img src="https://github.com/vava408.png" width="80" alt="vava408"/>
+</a>
+<a href="https://github.com/flem-anthony">
+  <img src="https://github.com/flem-anthony" width="80" alt="Lutteur"/>
+</a>
 
 ## **Contact**  
 For any questions or suggestions, feel free to open an issue or contact me via GitHub.
